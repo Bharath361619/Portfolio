@@ -1,0 +1,474 @@
+/* Divine Cosmos Color Scheme */
+:root {
+    --primary-color: #1c0b3b; /* Starry Indigo */
+    --secondary-color: #ffd700; /* Shimmering Gold */
+    --accent-color: #00e1d4; /* Celestial Teal */
+    --background-color: #0d0623; /* Deep Void */
+    --text-color: #f0e7ff; /* Ethereal White */
+    --card-background: rgba(255, 255, 255, 0.05); /* Glassmorphism */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* Header */
+#header {
+    height: 100vh;
+    background: linear-gradient(135deg, var(--primary-color), rgba(0, 225, 212, 0.3)), url('https://images.unsplash.com/photo-1516321310764-0f0f9b43b463');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--card-background);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 120px;
+    filter: brightness(0) invert(1);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-color);
+    transition: width 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    text-align: center;
+}
+
+.header-text p {
+    font-size: 24px;
+    color: var(--accent-color);
+}
+
+.header-text h1 {
+    font-size: 64px;
+    margin: 20px 0;
+}
+
+.header-text h1 span {
+    color: var(--accent-color);
+    text-shadow: 0 0 10px rgba(0, 225, 212, 0.5);
+}
+
+/* About */
+#about {
+    padding: 100px 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.about-col-1 {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about-col-2 {
+    flex: 2;
+    min-width: 300px;
+}
+
+.sub-title {
+    font-size: 48px;
+    margin-bottom: 30px;
+    color: var(--text-color);
+    position: relative;
+}
+
+.sub-title::after {
+    content: '';
+    width: 100px;
+    height: 4px;
+    background: var(--accent-color);
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+.tab-titles {
+    display: flex;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.tab-links {
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background 0.3s, color 0.3s;
+    color: var(--text-color);
+}
+
+.tab-links:hover,
+.tab-links.active-link {
+    background: var(--accent-color);
+    color: var(--text-color);
+}
+
+.tab-links:hover {
+    background: var(--secondary-color);
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+.tab-contents ul li span {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* Services */
+#services {
+    padding: 100px 0;
+    background: var(--primary-color);
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.services-list div {
+    background: var(--card-background);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s, border 0.3s;
+}
+
+.services-list div:hover {
+    border: 2px solid var(--secondary-color);
+    transform: translateY(-10px);
+}
+
+.services-list div i {
+    font-size: 40px;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.services-list div h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.services-list div p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.services-list div a {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.services-list div a:hover {
+    color: var(--secondary-color);
+}
+
+/* Skills */
+#skills {
+    padding: 100px 0;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.skill-item {
+    text-align: center;
+}
+
+.circular-progress {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+.circular-progress svg {
+    transform: rotate(-90deg);
+}
+
+.circular-progress circle {
+    fill: none;
+    stroke-width: 10;
+}
+
+.circular-progress .bg {
+    stroke: var(--primary-color);
+}
+
+.circular-progress .progress {
+    stroke: var(--accent-color);
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1s ease;
+}
+
+.circular-progress span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.skill-item h3 {
+    margin-top: 15px;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+/* Portfolio */
+#portfolio {
+    padding: 100px 0;
+    background: var(--primary-color);
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.work {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    display: block;
+    border-radius: 15px;
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 225, 212, 0.4));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.work:hover .layer {
+    opacity: 1;
+}
+
+.layer h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.layer p {
+    font-size: 14px;
+    text-align: center;
+    color: #ccc;
+}
+
+.layer a {
+    margin-top: 15px;
+    color: var(--text-color);
+    background: var(--accent-color);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.layer a:hover {
+    background: var(--secondary-color);
+}
+
+/* Contact */
+#contact {
+    padding: 100px 0;
+}
+
+.contact-left p {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.contact-left p i {
+    color: var(--accent-color);
+    margin-right: 10px;
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    color: var(--text-color);
+    font-size: 24px;
+    margin-right: 15px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+    color: var(--secondary-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--accent-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.contact-right form {
+    margin-top: 30px;
+    margin-left: 30px; /* Shift form fields slightly to the right */
+}
+
+.contact-right input,
+.contact-right textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    background: var(--card-background);
+    border: none;
+    border-radius: 8px;
+    color: var(--text-color);
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+.contact-right input:focus,
+.contact-right textarea:focus {
+    border: 2px solid var(--secondary-color);
+}
+
+.contact-right textarea {
+    resize: vertical;
+}
+
+.copyright {
+    text-align: center;
+    padding: 20px 0;
+    background: var(--primary-color);
+    margin-top: 50px;
+}
+
+.copyright i {
+    color: var(--accent-color);
+}

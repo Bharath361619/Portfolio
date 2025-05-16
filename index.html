@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharath - Creative Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/58305235b3.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <img src="nature pic.jpg" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="header">
+        <div class="container">
+            <div class="header-text">
+                <p>Creative UI/UX Designer</p>
+                <h1>Hi, I'm <span>Bharath</span><br> From Visakhapatnam</h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <h1 class="sub-title">About Me</h1>
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="nature.jpg">
+                </div>
+                <div class="about-col-2">
+                    <p>I'm a passionate UI/UX designer with a knack for creating intuitive and visually stunning interfaces. With years of experience in web and app development, I bring ideas to life through clean code and creative design.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX Design</span><br>Crafting intuitive web/app interfaces</li>
+                            <li><span>Web Development</span><br>Building responsive web applications</li>
+                            <li><span>App Development</span><br>Creating Android/iOS applications</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021 - Present</span><br>Senior UI/UX Designer at Creative Studio</li>
+                            <li><span>2019 - 2021</span><br>Lead Designer at Tech Innovate</li>
+                            <li><span>2017 - 2019</span><br>UI Designer at Digital Wave</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2016</span><br>Master’s in Design from Design Institute</li>
+                            <li><span>2014</span><br>Bachelor’s in Computer Science from Tech University</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div class="service-card" data-tilt>
+                    <i class="fas fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Creating responsive and visually appealing websites tailored to your brand.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="service-card" data-tilt>
+                    <i class="fas fa-crop-alt"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Designing user-friendly interfaces with a focus on user experience.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="service-card" data-tilt>
+                    <i class="fab fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <p>Developing intuitive mobile applications for iOS and Android.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="skills">
+        <div class="container">
+            <h1 class="sub-title">My Skills</h1>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="circular-progress" data-percent="90">
+                        <svg width="120" height="120">
+                            <circle class="bg" cx="60" cy="60" r="50"></circle>
+                            <circle class="progress" cx="60" cy="60" r="50" stroke-dasharray="314" stroke-dashoffset="31.4"></circle>
+                        </svg>
+                        <span>90%</span>
+                    </div>
+                    <h3>HTML</h3>
+                </div>
+                <div class="skill-item">
+                    <div class="circular-progress" data-percent="80">
+                        <svg width="120" height="120">
+                            <circle class="bg" cx="60" cy="60" r="50"></circle>
+                            <circle class="progress" cx="60" cy="60" r="50" stroke-dasharray="314" stroke-dashoffset="62.8"></circle>
+                        </svg>
+                        <span>80%</span>
+                    </div>
+                    <h3>CSS</h3>
+                </div>
+                <div class="skill-item">
+                    <div class="circular-progress" data-percent="70">
+                        <svg width="120" height="120">
+                            <circle class="bg" cx="60" cy="60" r="50"></circle>
+                            <circle class="progress" cx="60" cy="60" r="50" stroke-dasharray="314" stroke-dashoffset="94.2"></circle>
+                        </svg>
+                        <span>70%</span>
+                    </div>
+                    <h3>Bootstrap</h3>
+                </div>
+                <div class="skill-item">
+                    <div class="circular-progress" data-percent="60">
+                        <svg width="120" height="120">
+                            <circle class="bg" cx="60" cy="60" r="50"></circle>
+                            <circle class="progress" cx="60" cy="60" r="50" stroke-dasharray="314" stroke-dashoffset="125.6"></circle>
+                        </svg>
+                        <span>60%</span>
+                    </div>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-item">
+                    <div class="circular-progress" data-percent="85">
+                        <svg width="120" height="120">
+                            <circle class="bg" cx="60" cy="60" r="50"></circle>
+                            <circle class="progress" cx="60" cy="60" r="50" stroke-dasharray="314" stroke-dashoffset="47.1"></circle>
+                        </svg>
+                        <span>85%</span>
+                    </div>
+                    <h3>Photoshop</h3>
+                </div>
+                <div class="skill-item">
+                    <div class="circular-progress" data-percent="74">
+                        <svg width="120" height="120">
+                            <circle class="bg" cx="60" cy="60" r="50"></circle>
+                            <circle class="progress" cx="60" cy="60" r="50" stroke-dasharray="314" stroke-dashoffset="81.64"></circle>
+                        </svg>
+                        <span>74%</span>
+                    </div>
+                    <h3>Figma</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work" data-tilt>
+                    <img src="https://images.unsplash.com/photo-1611162617213-7d15a376f572">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>A platform connecting creators worldwide with seamless interaction.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work" data-tilt>
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda7f543ad">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>Stream your favorite music with a sleek, user-friendly interface.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work" data-tilt>
+                    <img src="https://images.unsplash.com/photo-1556742524-750f5ab949fb">
+                    <div class="layer">
+                        <h3>E-Commerce App</h3>
+                        <p>Shop effortlessly with a modern and secure mobile platform.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <h1 class="sub-title">Contact Me</h1>
+            <div class="row">
+                <div class="contact-left">
+                    <p><i class="fas fa-paper-plane"></i> contact@kevinjen.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i> +61 123 456 789</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter-square"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <a href="#" class="btn">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form id="contact-form">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 Bharath. Made with <i class="fas fa-heart"></i> and creativity.</p>
+        </div>
+    </div>
+
+    <script>
+        // Tab functionality
+        function opentab(tabname) {
+            document.querySelectorAll('.tab-links').forEach(link => link.classList.remove('active-link'));
+            document.querySelectorAll('.tab-contents').forEach(content => content.classList.remove('active-tab'));
+            event.currentTarget.classList.add('active-link');
+            document.getElementById(tabname).classList.add('active-tab');
+        }
+
+        // GSAP Animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from('#header .header-text', {
+            opacity: 0,
+            y: 100,
+            duration: 1,
+            delay: 0.5
+        });
+
+        gsap.utils.toArray('.sub-title').forEach(title => {
+            gsap.from(title, {
+                scrollTrigger: {
+                    trigger: title,
+                    start: 'top 80%'
+                },
+                opacity: 0,
+                x: -100,
+                duration: 1
+            });
+        });
+
+        gsap.utils.toArray('.service-card, .work').forEach(card => {
+            gsap.from(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 80%'
+                },
+                opacity: 0,
+                y: 50,
+                duration: 0.8,
+                stagger: 0.2
+            });
+        });
+
+        gsap.utils.toArray('.skill-item').forEach(skill => {
+            gsap.from(skill, {
+                scrollTrigger: {
+                    trigger: skill,
+                    start: 'top 80%'
+                },
+                opacity: 0,
+                scale: 0.8,
+                duration: 0.8,
+                stagger: 0.2
+            });
+        });
+
+        // Vanilla Tilt for 3D effects
+        VanillaTilt.init(document.querySelectorAll('.service-card, .work'), {
+            max: 15,
+            speed: 400,
+            glare: true,
+            'max-glare': 0.3
+        });
+
+        // Contact form validation
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = this.querySelector('input[name="name"]').value;
+            const email = this.querySelector('input[name="email"]').value;
+            const message = this.querySelector('textarea[name="message"]').value;
+
+            if (name && email && message) {
+                alert('Message sent successfully!');
+                this.reset();
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+    </script>
+</body>
+</html>
